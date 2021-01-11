@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- metas -->
+    <meta charset="utf-8">
+    <meta name="author" content="Paul Owe" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="admin,dashboard" />
+    <meta name="description" content="Intecultural Module: Resource Tagging and Comparison " />
+
+    <!-- title  -->
+    <title>United Kingdom</title>
+
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+        <link rel="manifest" href="../img/site.webmanifest">
+
+
+    <!-- common plugins -->
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../plugins/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../plugins/icomoon/style.css" />
+    <link rel="stylesheet" href="../plugins/uniform/css/default.css" />
+    <link rel="stylesheet" href="../plugins/switchery/switchery.min.css" />
+
+    <!-- jqvmap plugin -->
+    <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.css" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+
+    <!-- start page loading -->
+    <div id="preloader">
+        <div class="row loader">
+            <div class="loader-icon"></div>
+        </div>
+    </div>
+    <!-- end page loading -->
+
+    <!-- start page container -->
+    <div class="page-container">
+           <!-- start page sidebar -->
+        <div class="page-sidebar">
+            <a class="logo-box" href="../index.html">
+                <span>GLENDON @ YORK U</span>
+
+                <i class="icon-close" id="sidebar-toggle-button-close"></i>
+            </a>
+            <div class="page-sidebar-inner">
+                <div class="page-sidebar-menu">
+                    <ul class="accordion-menu">
+
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>Sustainable Development Goals</span><i class="accordion-icon fa fa-angle-left"></i>
+                        </a>
+                        <ul>
+                         <li>
+                              <a href="javascript:void(0);">
+                                  <i class="menu-icon icon-public"></i><span id="poverty">No Poverty</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="javascript:void(0);">
+                                    <i class="menu-icon icon-public"></i><span id="">Zero Hunger</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="javascript:void(0);">
+                                    <i class="menu-icon icon-public"></i><span id="">Good Health and Well-being</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="javascript:void(0);">
+                                    <i class="menu-icon icon-public"></i><span id="">Quality Education</span>
+                              </a>
+                          </li>
+                            <li>
+                            <a href="javascript:void(0);">
+                                <i class="menu-icon icon-public"></i><span id="">Gender Equality</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i class="menu-icon icon-public"></i><span id="">Clean Water and Sanitation</span>
+                            </a>
+                        </li>
+                         <li>
+                              <a href="javascript:void(0);">
+                                    <i class="menu-icon icon-public"></i><span id="">Affordable and Clean Energy</span>
+                              </a>
+                          </li>
+                    
+                          <li>
+                              <a href="javascript:void(0);">
+                                    <i class="menu-icon icon-public"></i><span id="">Decent Work and Economic Growth</span>
+                              </a>
+                          </li>
+                         
+                          <li>
+                              <a href="javascript:void(0);">
+                                    <i class="menu-icon icon-public"></i><span id="">Industry, Innovation and Infrastructure</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="javascript:void(0);">
+                                    <i class="menu-icon icon-public"></i><span id="">Reduced Inequality</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="javascript:void(0);">
+                                    <i class="menu-icon icon-public"></i><span id="">Sustainable Cities</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="javascript:void(0);">
+                                    <i class="menu-icon icon-public"></i><span id="">Responsible Consumption and Production</span>
+                              </a>
+                          </li>
+                            <li>
+                              <a href="../sdg/climate.html">
+                                  <i class="menu-icon icon-public"></i><span id="climate">Climate Action</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="javascript:void(0);">
+                                    <i class="menu-icon icon-public"></i><span id="">Life Below Water</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="javascript:void(0);">
+                                    <i class="menu-icon icon-public"></i><span id="">Life on Land</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="javascript:void(0);">
+                                    <i class="menu-icon icon-public"></i><span id="">Peace and Justice Institutions</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="javascript:void(0);">
+                                    <i class="menu-icon icon-public"></i><span id="">Partnerships to achieve the Goal</span>
+                              </a>
+                          </li>
+                       
+                        </ul>
+                    </li>
+
+                        <li class="menu-divider"></li>
+
+                     <li>
+                        <a href="javascript:void(0);">
+                            <span>OECD Countries</span><i class="accordion-icon fa fa-angle-left"></i>
+                        </a>
+                        <ul>
+                        <li>
+                              <a href="australia.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Australia</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="austria.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Austria</span>
+                              </a>
+                          </li>
+                           <li>
+                             <a href="belgium.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Belgium</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="canada.html">
+                                    <i class="menu-icon icon-public"></i><span id="gender">Canada</span>
+                              </a>
+                          </li>
+                           <li>
+                             <a href="chile.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Chile</span>
+                              </a>
+                          </li>
+                           <li>
+                             <a href="chile.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Czech Republic</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="denmark.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Denmark</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="estonia.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Estonia</span>
+                              </a>
+                          </li>
+                           <li>
+                             <a href="finland.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Finland</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="france.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">France</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="germany.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Germany</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="greece.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Greece</span>
+                              </a>
+                          </li>
+                          <li>
+                             <a href="hungary.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Hungary</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="iceland.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Iceland</span>
+                              </a>
+                          </li>
+                          <li>
+                             <a href="ireland.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Ireland</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="israel.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Israel</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="italy.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Italy</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="japan.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Japan</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="korea.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Korea</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="latvia.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Latvia</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="lithuania.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Lithuania</span>
+                              </a>
+                          </li>
+                          <li>
+                             <a href="luxembourg.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Luxembourg</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="mexico.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Mexico</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="netherlands.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Netherlands</span>
+                              </a>
+                          </li>
+                          <li>
+                             <a href="newzealand.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">New Zealand</span>
+                              </a>
+                          </li>
+                          <li>
+                             <a href="norway.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Norway</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="poland.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Poland</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="portugal.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Portugal</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="slovakrepublic.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Slovak Republic</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="slovenia.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Slovenia</span>
+                              </a>
+                          </li>
+                           <li>
+                             <a href="spain.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Spain</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="sweden.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Sweden</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="switzerland.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Switzerland</span>
+                              </a>
+                          </li>
+                          <li>
+                             <a href="turkey.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">Turkey</span>
+                              </a>
+                          </li>
+                           <li>
+                             <a href="unitedkingdom.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">United Kingdom</span>
+                              </a>
+                          </li>
+                            <li>
+                             <a href="unitedstates.html">
+                                  <i class="menu-icon icon-public"></i><span id="meal">United States</span>
+                              </a>
+                          </li>
+                
+            
+                        </ul>
+                    </li>
+
+                             <li class="menu-divider"></li>
+
+                    
+                     <li>
+                        <a href="javascript:void(0);">
+                            <span>Region Specific</span><i class="accordion-icon fa fa-angle-left"></i>
+                        </a>
+                        <ul>
+                            <li>
+                              <a href="../regions/asia.html">
+                                  <i class="menu-icon icon-public"></i><span id="migration">Asia</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="../regions/africa.html">
+                                  <i class="menu-icon icon-public"></i><span id="poverty">Africa</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="../regions/northamerica.html">
+                                  <i class="menu-icon icon-public"></i><span id="">North America</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="../regions/southamerica.html">
+                                  <i class="menu-icon icon-public"></i><span id="">South America</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="../regions/antarctica.html">
+                                  <i class="menu-icon icon-public"></i><span id="">Antarctica</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="../regions/europe.html">
+                                  <i class="menu-icon icon-public"></i><span id="">Europe</span>
+                              </a>
+                          </li>
+                           <li>
+                              <a href="../regions/australia.html">
+                                  <i class="menu-icon icon-public"></i><span id="">Australia</span>
+                              </a>
+                          </li>
+            
+                        </ul>
+                    </li>
+
+                     <li class="menu-divider"></li>
+
+                       <li>
+                                <a href="javascript:void(0);">
+                                    More</span><i class="accordion-icon fa fa-angle-left"></i>
+                                </a>
+                                <ul>
+                                    <li><a href="../form-elements.html">Create and Edit Resource</a></li>
+                        
+                                    <li><a href="../form-file-upload.html">Bulk Resource Upload</a></li>
+
+                                    <li><a href="javascript:void(0);">Support</a></li>
+                                   
+                                </ul>
+                            </li>
+
+                     <li class="menu-divider"></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end page sidebar -->
+
+        <!-- start page content -->
+        <div class="page-content">
+            <!-- start page header -->
+            <div class="page-header">
+                <div class="search-form">
+                    <form action="#" method="GET">
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control search-input" placeholder="Type something...">
+                            <span class="input-group-btn">
+                                    <button class="btn btn-default" id="close-search" type="button"><i class="icon-close"></i></button>
+                                </span>
+                        </div>
+                    </form>
+                </div>
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <div class="logo-sm">
+                                <a href="javascript:void(0)" id="sidebar-toggle-button"><i class="fa fa-bars"></i></a>
+                                <a class="logo-box" href="../index.html"><span>GLENDON</span></a>
+                            </div>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <i class="fa fa-angle-down"></i>
+                            </button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="javascript:void(0)" id="collapsed-sidebar-toggle-button"><i class="fa fa-bars"></i></a></li>
+                                <li><a href="javascript:void(0)" id="toggle-fullscreen"><i class="fa fa-expand"></i></a></li>
+                                <li><a href="javascript:void(0)" id="search-button"><i class="fa fa-search"></i></a></li>
+                            </ul>
+                             <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown user-dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="../img/avatars/icon.jpg" alt="" class="rounded-circle"></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="../login.html">Login</a></li>
+                                        <li><a href="../register.html">Register</a></li>
+                                        
+                                        <li role="separator" class="divider"></li>
+                                        
+                                        <li><a href="#">Contact Us</a></li>
+                                    </ul>
+                                </li> 
+                            </ul>
+
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </div>
+            <!-- end page header -->
+            <!-- start page inner -->
+            <div class="page-inner full-page no-footer">
+                <div id="vmap"></div>
+            </div>
+            <!-- end page inner -->
+        </div>
+        <!-- end page content -->
+    </div>
+    <!-- end page container -->
+
+    <!-- all js include start -->
+
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery-3.1.0.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- slimscroll -->
+    <script src="../plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- uniform -->
+    <script src="../plugins/uniform/js/jquery.uniform.standalone.js"></script>
+
+    <!-- switchery -->
+    <script src="../plugins/switchery/switchery.min.js"></script>
+
+    <!--vmap ay  -->
+    <script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
+
+
+
+    <!-- vmap france -->
+    <script src="../plugins/jqvmap/maps/jquery.vmap.uk.js"></script>
+
+
+
+
+    <!-- custom scripts -->
+    <script src="../js/main.js"></script>
+
+    <!-- map vector -->
+    <script src="../js/pages/categories/uk.js"></script>
+
+    <!-- all js include end -->
+
+</body>
+
+</html>
