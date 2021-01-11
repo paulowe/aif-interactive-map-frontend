@@ -9,6 +9,33 @@
 
 Frontend application for displaying and comparing SDG policies across countries and continents.
 
+### Current active SDG:
+- Climate action
+
+(more SDGs otw)
+
+### Current active OECD countries:
+- Austria
+- Canada
+- France
+- Germany
+- Greece
+- Turkey
+- United Kingdom
+- United States
+
+(more vector maps otw)
+
+### Current active regions:
+- Asia
+- Africa
+- North America
+- South America
+- Europe
+
+(Antarctica and Australia otw)
+
+
 ## Setting up
 
 ##### Clone the repo
