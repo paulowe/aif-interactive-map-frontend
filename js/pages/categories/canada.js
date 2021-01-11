@@ -21,7 +21,7 @@ $( document ).ready(function() {
             var message = 'Text, Photos and other media about "'
             + region
             + '" can be displayed here. '
-            + 'The code for this country is: '
+            + 'The code for this province is: '
             + code.toUpperCase();
 
             alert(message);
