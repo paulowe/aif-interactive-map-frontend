@@ -7,14 +7,14 @@
 
 ## Synopsis
 
-Frontend application for displaying and comparing SDG policies across countries and continents.
+Frontend application for displaying and comparing SDG policies across countries (OECD) and continents.
 
-### Current active SDG:
+#### Current active SDG:
 - Climate action
 
 (more SDGs otw)
 
-### Current active OECD countries:
+#### Current active OECD countries:
 - Austria
 - Canada
 - France
@@ -26,7 +26,7 @@ Frontend application for displaying and comparing SDG policies across countries 
 
 (more vector maps otw)
 
-### Current active regions:
+#### Current active regions:
 - Asia
 - Africa
 - North America
