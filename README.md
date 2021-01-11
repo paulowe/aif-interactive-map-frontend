@@ -19,8 +19,10 @@ $ cd aif-interactive-map-frontend
 ```
 
 ## Running the app
-
-Simply double-click on ```index.html``` . A static preview should display on your preferred browser.
+```
+$ open ./index.html
+```
+or simply double-click on ```index.html``` . A static preview should display on your preferred browser.
 
 ## License
 [MIT License](LICENSE.md)
