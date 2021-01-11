@@ -2,7 +2,7 @@
 
     Theme Name: Fabrex - Responsive Admin Dashboard Template
     Description: Responsive Admin Dashboard Template
-    Author: chitrakootweb
+    Author: paulowe
     Version: 3.2
 
     /* ----------------------------------
