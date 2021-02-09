@@ -238,10 +238,13 @@ $( document ).ready(function() {
 
       //shortcut for accessing each country's DOM object
 
-      var x = document.getElementById("canada");
+      var x = document.getElementById("Canada");
       var y = document.getElementById("india");
       var z = document.getElementById("brazil");
       var t = document.getElementById("Tanzania")
+      var u = document.getElementById("United Kingdom")
+      var s = document.getElementById("United States")
+
      
       //hide data for all unselected countries
 
@@ -268,47 +271,69 @@ $( document ).ready(function() {
     
       else {  t.style.display = "none"; };
 
+      //UK
+      if(map.selectedRegions.indexOf("gb") !== -1) {  u.style.display = "block";   }
+    
+      else {  u.style.display = "none"; };
+
+      //US
+      if(map.selectedRegions.indexOf("us") !== -1) {  s.style.display = "block";   }
+    
+      else {  s.style.display = "none"; };
+
 
   
   }
   
-//Load Climate data
-var data = [{'resource1': {'country': 'Tanzania',
-'input':'This is sample input Tanzania'}
-}, {'resource2': {'country': 'Kenya',
-'input':'This is sample input Kenya'}
-}]
-
-
-//dynamically update enabled regions and create a list of div objects based on data from the database 
+//1. Asynchronously loading all climate resource data 
+var database = firebase.database();
+var resourcetable = database.ref('resources');
 var colors = {}
-$.each(data, function(index, resourceObject){
-  $.each(resourceObject, function(objectId, objectcontents){
+var data = []
+resourcetable.on("child_added", function(snap){
+  //push data into array of json objects --> data = [ {country:..., input: ...}, {country2: ..., input2:...}, ... ]
+  data.push(snap.val());
+  console.log(data)
+   //dynamically update enabled regions and create a list of div objects based on data from the database 
+  $.each(data, function(index, objectcontents){
 
-      let div = document.createElement('div');
-      div.className = "modal-body"
-      div.id = objectcontents.country
-      //update enabled regions on data-fetch
-      enabledRegions.push(codeMap[objectcontents.country])
-      //end update
+    let div = document.createElement('div');
+    div.className = "modal-body"
+    div.id = objectcontents.selectedCountry
+    $('.modal-body').css('display','none')
+    //update enabled regions on data-fetch
+    enabledRegions.push(codeMap[objectcontents.selectedCountry])
+    //end update
 
-      //update active colors
-      colors[codeMap[objectcontents.country]] = '#2E8B57'
-      
-      div.innerHTML = objectcontents.input
-      var element = document.getElementById('data-list');
-      element.appendChild(div)
-      //console.log(objectcontents.input);
-      console.log("key: "+objectcontents.country+" ; Value : "+objectcontents.input);
-      console.log(enabledRegions)
-      
-
+    //set active region colors
+    colors[codeMap[objectcontents.selectedCountry]] = '#2E8B57'
+    //end update
+    
+    div.innerHTML = objectcontents.input
+    var element = document.getElementById('data-list');
+    element.appendChild(div)
+    //console.log(objectcontents.input);
+    console.log("key: "+objectcontents.selectedCountry+" ; Value : "+objectcontents.input);
+    console.log(enabledRegions)
 
 });
-});
 
+//dynamically update map to show regions with data
 jQuery('#vmap').vectorMap('set', 'colors', colors);
 console.log(colors)
+
+  });
+    
+     
+
+ 
+
+
+      
+
+
+
+
 
 
 
