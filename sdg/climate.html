@@ -499,11 +499,13 @@
                                 <h4 class="modal-title" id="myLargeModalLabel">Comparison on Climate Action Policies</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             </div>
+                        <div id='data-list'>
                             <div id ="canada" class="modal-body">
-                                <h4> <img src="../img/countries/canada.png" alt="" class="rounded-circle"> Canada</h4> The Pan-Canadian Framework for Clean Growth and Climate Change is Canada's plan to meet its emissions reduction targets, grow the economy, and build resilience to a changing climate.
-
-                                <br>
-                                <br> Visit the program website <a href="https://climate-change.canada.ca/climate-action-map/App/index?GOCTemplateCulture=en-CA" style="color:#191970;">here</a>
+                                <h4> <img src="../img/countries/canada.png" alt="" class="rounded-circle"> Canada</h4> 
+                                
+                                <p>The Pan-Canadian Framework for Clean Growth and Climate Change is Canada's plan to meet its emissions reduction targets, grow the economy, and build resilience to a changing climate.</p>
+                                <p id="canada-info"></p>
+                                <p> Visit the program website <a href="https://climate-change.canada.ca/climate-action-map/App/index?GOCTemplateCulture=en-CA" style="color:#191970;">here</a></p>
                                 <hr>
                             </div>
                             <div id ="india" class="modal-body">
@@ -521,6 +523,8 @@
                                 <br>
                                 <br> For full details see <a href"https://climateactiontracker.org/countries/brazil/current-policy-projections/" style="color:#191970;">Current Policy Projections</a> section
                             </div>
+                        </div>
+                            
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                             </div>
@@ -557,17 +561,18 @@
     <!-- switchery -->
     <script src="../plugins/switchery/switchery.min.js"></script>
 
-    <!--  -->
+    <!-- Vmap min -->
     <script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
 
     <!-- vmap world -->
     <script src="../plugins/jqvmap/maps/jquery.vmap.world.js"></script>
 
-    <!-- vmap canada -->
-    <script src="../plugins/jqvmap/maps/jquery.vmap.canada.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
 
-
-
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
 
     <!-- custom scripts -->
     <script src="../js/main.js"></script>
@@ -576,6 +581,9 @@
     <script src="../js/pages/categories/climate.js"></script>
 
     <!-- all js include end -->
+
+
+
 
 </body>
 
