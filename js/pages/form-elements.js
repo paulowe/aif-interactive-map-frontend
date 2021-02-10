@@ -25,9 +25,9 @@ $(document).ready(function() {
 
 
 
-    document.getElementById("firebase-button").onclick = function () { 
+    document.getElementById("firebase-submit-button").onclick = function () { //Entering new Data
 
-        //Quick setup
+        // Quick setup
         var name = $("#name").val();
         var username = $("#username").val();
         var category = $("#category").find(":selected").text();
@@ -35,37 +35,56 @@ $(document).ready(function() {
         var tag = $("#tag").val();
         var input = $("#input").code();
 
-       //Test data retrieval
-        console.log(name)
-        console.log(username)
-        console.log(category)
-        console.log(selectedCountry)
-        console.log(tag)
-        console.log(input)
-
         //Add data to firebase
-
         var database = firebase.database();
-        var resourcetable = database.ref('resources');
-        resourcetable.push({
-                name: name,
-                username: username,
-                category: category,
-                selectedCountry: selectedCountry,
-                tag: tag,
-                input: input
-            });
-        
+        var usersRef = database.ref("users"); //Users Tree
 
+        if (name == "") {
+            alert("Please enter your name!");
+        }
+        else {
+            //Check if user exists first
+            var userExists = database.ref("users/" + name);
 
-        
-       
-
-
-    
-  
-    
+            userExists.once("value")
+                .then(function(userinDB){
+                    if (userinDB.exists()){ //if username exists only create new category, update
+                        var categoryExists = database.ref("users/" + name + "/Category/" + category);
+                        
+                        categoryExists.once("value")
+                        .then(function(categoryinDB){
+                            if (categoryinDB.exists()){ //if username exists only create new category, update
+                                usersRef.child(name).child("Category").child(category).push({
+                                    Country: selectedCountry,
+                                    Tag: tag,
+                                    UserComment: input,
+                                });
+                            }
+                            else{
+                                firebase.database().ref('users/' + name + '/Category/' + category).push({
+                                    Country: selectedCountry,
+                                    Tag: tag,
+                                    UserComment: input,
+                                }) 
+                            }
+                        });
+                    }
+                    else{//if not, create new
+                        usersRef.child(name).child("Category").child(category).push({
+                            Country: selectedCountry,
+                            Tag: tag,
+                            UserComment: input,
+                        });  
+                    }
+                });
+                // //Test data retrieval
+                // console.log("name: ", name)
+                // console.log("username: ", username)
+                // console.log("category: ", category)
+                // console.log("country: ", selectedCountry)
+                // console.log("tag: ", tag)
+                // console.log("input: ", input)
+        }
     }
-
 
 });
