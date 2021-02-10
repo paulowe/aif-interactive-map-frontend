@@ -36,12 +36,12 @@ $(document).ready(function() {
         var input = $("#input").code();
 
        //Test data retrieval
-        console.log(name)
-        console.log(username)
-        console.log(category)
-        console.log(selectedCountry)
-        console.log(tag)
-        console.log(input)
+        // console.log(name)
+        // console.log(username)
+        // console.log(category)
+        // console.log(selectedCountry)
+        // console.log(tag)
+        // console.log(input)
 
         //Add data to firebase
 

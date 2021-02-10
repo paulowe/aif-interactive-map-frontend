@@ -274,12 +274,25 @@ $( document ).ready(function() {
       //console.log(data)
       //dynamically update enabled regions and create a list of div objects based on data from the database 
       $.each(data, function(index, objectcontents){
-
+        //create main div
         let div = document.createElement('div');
         div.className = "modal-body"
         $('.modal-body').css('display','none')
-        //div.id = objectcontents.selectedCountry
         div.id = codeMap[objectcontents.selectedCountry]
+        div.innerHTML = objectcontents.input
+      
+//In progress: Prettify rendering of 
+          // //create country/region image
+          // let countryImage = document.createElement('img');
+          // countryImage.src = "../img/countries/" + objectcontents.selectedCountry + ".png"
+          // title.appendChild(countryImage)
+
+          // //create header with Country/Region name
+          // let title = document.createElement('h4');
+          // title.className = "rounded-circle";
+          // title.innerHTML = objectcontents.selectedCountry + '</br>';
+
+
         //update enabled regions on data-fetch
         enabledRegions.push(codeMap[objectcontents.selectedCountry])
         //end update
@@ -288,7 +301,7 @@ $( document ).ready(function() {
         colors[codeMap[objectcontents.selectedCountry]] = '#2E8B57'
         //end update
         
-        div.innerHTML = objectcontents.input
+        
         var element = document.getElementById('data-list');
         element.appendChild(div)
         
@@ -305,27 +318,6 @@ $( document ).ready(function() {
 
 
   });
-
-
-
-    
-     
-
- 
-
-
-      
-
-
-
-
-
-
-
-
-
-//Populate data on map
-//document.getElementById("canada-info").innerHTML = input;
 
 
 });
