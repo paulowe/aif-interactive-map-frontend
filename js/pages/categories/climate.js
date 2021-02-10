@@ -282,15 +282,15 @@ $( document ).ready(function() {
         div.innerHTML = objectcontents.input
       
 //In progress: Prettify rendering of 
-          // //create country/region image
-          // let countryImage = document.createElement('img');
-          // countryImage.src = "../img/countries/" + objectcontents.selectedCountry + ".png"
-          // title.appendChild(countryImage)
+          //create country/region image
+          let countryImage = document.createElement('img');
+          countryImage.src = "../img/countries/" + objectcontents.selectedCountry + ".png"
+          title.appendChild(countryImage)
 
-          // //create header with Country/Region name
-          // let title = document.createElement('h4');
-          // title.className = "rounded-circle";
-          // title.innerHTML = objectcontents.selectedCountry + '</br>';
+          //create header with Country/Region name
+          let title = document.createElement('h4');
+          title.className = "rounded-circle";
+          title.innerHTML = objectcontents.selectedCountry + '</br>';
 
 
         //update enabled regions on data-fetch
