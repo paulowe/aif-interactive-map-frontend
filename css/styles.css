@@ -42,6 +42,7 @@
         3.21 Page Header Nav
         3.22 Popover
         3.23 Accordion style
+        3.24 Country Images (the round icons)
     04. Layout
         4.1 Page Container
         4.2 Page Header
@@ -1888,6 +1889,13 @@ th {
 
 #accordion .card-title, #accordion2 .card-title {
   padding: 20px; }
+
+/* Country Icons (Round icons) */
+.country-icon{
+
+    width:  25px;
+    height: 25px;
+}
 
 /* ===================================
     Layout

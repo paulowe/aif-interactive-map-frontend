@@ -274,24 +274,38 @@ $( document ).ready(function() {
       //console.log(data)
       //dynamically update enabled regions and create a list of div objects based on data from the database 
       $.each(data, function(index, objectcontents){
-        //create main div
-        let div = document.createElement('div');
+        //main div
+        var div = document.createElement('div');
         div.className = "modal-body"
         $('.modal-body').css('display','none')
         div.id = codeMap[objectcontents.selectedCountry]
-        div.innerHTML = objectcontents.input
-      
-//In progress: Prettify rendering of 
-          //create country/region image
-          let countryImage = document.createElement('img');
-          countryImage.src = "../img/countries/" + objectcontents.selectedCountry + ".png"
-          title.appendChild(countryImage)
 
-          //create header with Country/Region name
-          let title = document.createElement('h4');
-          title.className = "rounded-circle";
-          title.innerHTML = objectcontents.selectedCountry + '</br>';
+        //country name and image in heading
+        var title = document.createElement('h4');
+        var countryImage = document.createElement('img');
+        title.textContent = " " + objectcontents.selectedCountry + " ";
+        countryImage.src = "../img/countries/" + objectcontents.selectedCountry + ".png"
+        countryImage.className = "country-icon";
+        
+        //nest (to keep inline) and append
+        title.appendChild(countryImage)
+        //title.innerHTML = objectcontents.selectedCountry + " ";
+        div.appendChild(title)
 
+        //summernote content
+        var input = document.createElement('p');
+        input.innerHTML = objectcontents.input;
+        div.appendChild(input);
+
+        //credit author
+        var author = document.createElement('p')
+        author.innerHTML = ' Last updated by: ' + objectcontents.name + ' (' + objectcontents.username + ')';
+        div.appendChild(author);
+
+        //separator element
+        var separator = document.createElement('hr');
+        div.appendChild(separator);
+        //div.innerHTML = objectcontents.input
 
         //update enabled regions on data-fetch
         enabledRegions.push(codeMap[objectcontents.selectedCountry])
@@ -301,7 +315,7 @@ $( document ).ready(function() {
         colors[codeMap[objectcontents.selectedCountry]] = '#2E8B57'
         //end update
         
-        
+        //all array items should be nested in data list div element
         var element = document.getElementById('data-list');
         element.appendChild(div)
         
