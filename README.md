@@ -4,6 +4,7 @@
 
 - Paul Owe
 - Reem Aleithan
+- Johnny (Junyoung) Kang
 
 ## Synopsis
 
